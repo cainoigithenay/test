@@ -1,0 +1,20 @@
+<div>
+  <button (click)="fetchLocation()">Get Current Location</button>
+  <div *ngIf="latitude && longitude">
+    <p>Latitude: {{ latitude }}</p>
+    <p>Longitude: {{ longitude }}</p>
+  </div>
+  <p *ngIf="error" style="color: red;">Error: {{ error }}</p>
+
+  <div *ngIf="error">
+    <p>You can manually enter your location:</p>
+    <label>
+      Latitude:
+      <input type="number" [(ngModel)]="latitude" />
+    </label>
+    <label>
+      Longitude:
+      <input type="number" [(ngModel)]="longitude" />
+    </label>
+  </div>
+</div>

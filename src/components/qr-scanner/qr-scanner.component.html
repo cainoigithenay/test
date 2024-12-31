@@ -1,0 +1,5 @@
+<div>
+  <video id="video" style="width: 100%; height: auto;"></video>
+  <button (click)="startScanner()" [disabled]="isScanning">Start QR Scanner</button>
+  <button (click)="stopScanner()" [disabled]="!isScanning">Stop QR Scanner</button>
+</div>

@@ -1,0 +1,17 @@
+<div>
+  <app-qr-scanner (scannedResult)="onQrScanned($event)"></app-qr-scanner>
+  
+  <div *ngIf="scannedData">
+    <p><strong>Scanned QR Code:</strong> {{ scannedData }}</p>
+  </div>
+  
+  <div *ngIf="latitude && longitude">
+    <p><strong>Current Location:</strong></p>
+    <p>Latitude: {{ latitude }}</p>
+    <p>Longitude: {{ longitude }}</p>
+  </div>
+  
+  <div *ngIf="error" style="color: red;">
+    <p>Error: {{ error }}</p>
+  </div>
+</div>
